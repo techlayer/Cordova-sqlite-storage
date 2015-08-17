@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="io.litehelpers.cordova.sqlite"
+    id="com.techlayer.cordova.sqlite"
     version="0.7.10">
 
-    <name>Cordova sqlite storage plugin</name>
+    <name>Cordova SQLite Plugin</name>
 
     <license>MIT</license>
 
@@ -14,7 +14,7 @@
     <author>litehelpers (various)</author>
 
     <engines>
-        <engine name="cordova" version=">=3.3.0" />
+        <engine name="cordova" version=">=4.0.0" />
     </engines>
 
     <js-module src="www/SQLitePlugin.js" name="SQLitePlugin">
@@ -47,12 +47,13 @@
             </feature>
         </config-file>
 
+        <framework src="libsqlite3.dylib" />
+
+        <header-file src="src/ios/NSData+Base64.h" />
+        <source-file src="src/ios/NSData+Base64.m" />
+
         <header-file src="src/ios/SQLitePlugin.h" />
         <source-file src="src/ios/SQLitePlugin.m" />
-
-        <header-file src="src/common/sqlite3.h" />
-        <source-file src="src/common/sqlite3.c" />
-
     </platform>
 
     <!-- windows -->
