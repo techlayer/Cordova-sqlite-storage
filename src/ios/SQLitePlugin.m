@@ -12,7 +12,9 @@
 
 #include <regex.h>
 
-#import <Cordova/NSData+Base64.h>
+#import "NSData+Base64.h"
+
+// #import <Cordova/NSData+Base64.h>
 
 static void sqlite_regexp(sqlite3_context* context, int argc, sqlite3_value** values) {
     if ( argc < 2 ) {
